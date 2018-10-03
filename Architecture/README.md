@@ -21,16 +21,16 @@ There are a lot of possible design decisions. While the [DIZK paper](https://epr
     - [x] Finite field arithmerics
         - Lagrange interpolation and polynomial evaluation are well-suited
     - [x] Point multiplication and addition
-    - [x] Fixed base multiexponentiation
-    - [-] Variable base multiexponentiation
-        -  This one most likely will be "multiply independently on GPU - add somewhere"
+    - [x] Fixed base multiexponentiation. This options is ok for CUDA architecture, but only needed for a setuper
+    - [x] Variable base multiexponentiation
+        -  This one most likely will be "multiply independently on GPU - add somewhere" due to high memory requirements and may be too complicated logic on Peppinger. Unfortunately this is required for a prover
 - [x] Depending from the parallelicity point decide how work will be discributed due to large latency `CPU <-> GPU`
     - More or less done, few points above
 - [x] Check that Lagrange interpolation described in DIZK works fine for GPU (most likely related to question about large factor of `q-1`)
     - Stick for DIZK approach with large factor in `q-1` 
 - [ ] Implement finite field arithmetics on GPU
 - [ ] Implement chosen argorithms for point multiplications on GPU
-- [ ] Implement pairing calculation on GPU
+- [ ] Implement pairing calculation on GPU - optional, not needed for prover
 - [ ] Implement CPU part for dataflow
     - [ ] Chose distributed computing framework
     - [ ] Check whether GPU programs can be easily called from Java (if we chose Apache Spark)
