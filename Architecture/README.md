@@ -16,6 +16,7 @@ There are a lot of possible design decisions. While the [DIZK paper](https://epr
     - Use CUDA for now due to architecture-specific choices for multiexponentiation
 - [ ] Choose a library for long arithmetics (actually, finite field arithmetics) for GPU
     - [ ] There is a great new thesis about GPU arithmetics [here](https://scholarworks.umass.edu/cgi/viewcontent.cgi?article=2252&context=dissertations_2), check if some existing library can be reused. Unfortunately such papers focus on very long arithmetics and go into FFT
+    - [x] This [one](https://github.com/NVlabs/xmp) from NVidia looks like a good candidate to start
 - [x] Decide at what point computations will be "parallelized". Options:
     - [x] Finite field arithmerics
         - Lagrange interpolation and polynomial evaluation are well-suited
