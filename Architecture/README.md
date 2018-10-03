@@ -5,7 +5,7 @@ This file will contain open questions and architecture proposal
 
 ## Problems to solve
 
-There are a lot of possible design decisions. Luckily the [DIZK paper](https://eprint.iacr.org/2018/691.pdf) explains a lot about how to parallelize the zkSNARKs proving, substantial question remain on how to make a hybrid CPU/GPU solution
+There are a lot of possible design decisions. While the [DIZK paper](https://eprint.iacr.org/2018/691.pdf) explains a lot about how to parallelize the zkSNARKs proving, substantial question remain on how to make a hybrid CPU/GPU solution
 
 - [ ] Original implementation uses a custom curve with large `2^n` factor in `q-1` where `q` is a group order of the pairing curve. Find what are the consequences for using arbitrary curve with pairing support (to be compatible with BN curve in Ethreum precompiles)
 - [x] Check for a prefactor in BLS12-381 curve.
